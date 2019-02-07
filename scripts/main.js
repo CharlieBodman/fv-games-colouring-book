@@ -1,4 +1,4 @@
-
+import saveAs from './libs/FileSaver';
 
 class Main {
 
@@ -144,16 +144,10 @@ class Main {
         overlay.alpha = this.bmdContainer.alpha;
 
         //  The save icon
-        this.saveIcon = this.add.sprite(8, 456, 'save');
+        this.saveIcon = this.add.sprite(8, 65, 'save');
         this.saveIcon.inputEnabled = true;
         this.saveIcon.input.useHandCursor = true;
         this.saveIcon.events.onInputUp.add(this.save, this);
-
-        //  The print icon
-        this.printIcon = this.add.sprite(8, 528, 'print');
-        this.printIcon.inputEnabled = true;
-        this.printIcon.input.useHandCursor = true;
-        this.printIcon.events.onInputUp.add(this.print, this);
 
         //  The palette swatch
         //  This is just a PNG we created in PhotoShop, that detects clicks on it.
@@ -246,23 +240,6 @@ class Main {
 
         //  And update the pixel data, ready for the next fill
         this.bmd.update();
-
-    }
-
-    /**
-     * Called when the user clicks the Print icon.
-     *
-     * Opens a printer dialog with the image on.
-     */
-    print () {
-
-        //  You can add whatever HTML you need here, such as a logo, or copyright text,
-        //  and it will be printed along with the image.
-
-        var win = window.open();
-        win.document.write("<br><img src='" + this.bmd.canvas.toDataURL() + "'/>");
-        win.print();
-        win.location.reload();
 
     }
 

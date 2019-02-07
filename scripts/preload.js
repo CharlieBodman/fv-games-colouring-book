@@ -38,24 +38,13 @@ class Preload {
         this.game.add.existing(this.status);
         this.game.load.setPreloadSprite(this.loadingBar);
 
-        //  First we load in the extra libs this game needs, there are 4 in total.
-        //  If you've got your own build process, i.e. a Grunt or Gulp script, that
-        //  packages your games together, then I would suggest rolling these 4 files into
-        //  that instead, rather than loading them at run-time like here.
-
-        this.load.script('BitmapDataFloodFill', config.libs.bitmapDataFloodFill );
-        this.load.script('FileSaver', config.libs.fileSaver );
-        this.load.script('Blob', config.libs.blob );
-        this.load.script('CanvasToBlob', config.libs.canvasToBlob);
-
         //  Load in the assets. There is a color swatch, some icons and a paper texture.
         //  This is all just the template UI. The pictures and thumbnails are the things
         //  that are actually colored in.
 
-        this.load.images(['swatch', 'selected', 'print', 'save', 'background'],[
+        this.load.images(['swatch', 'selected', 'save', 'background'],[
             config.images.swatch,
             config.images.selected,
-            config.images.print,
             config.images.save,
             config.images.background
         ]);

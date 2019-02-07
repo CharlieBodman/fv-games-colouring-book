@@ -1,19 +1,11 @@
 
 let defaultGameConfig = {
 
-    libs:{
-        bitmapDataFloodFill:'assets/libs/BitmapDataFloodFill.js',
-        blob:'assets/libs/Blob.js',
-        canvasToBlob:'assets/libs/CanvasToBlob.js',
-        fileSaver:'assets/libs/FileSaver.js'
-    },
-
     images:{
         preloaderLoading:'assets/images/loading.png',
         preloaderLogo:'assets/images/logo.png',
         swatch:'assets/images/swatch.png',
         selected:'assets/images/selected.png',
-        print:'assets/images/print.png',
         save:'assets/images/save.png',
         picture1:'assets/images/picture1.png',
         picture2:'assets/images/picture2.png',

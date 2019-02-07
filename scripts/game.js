@@ -1,3 +1,4 @@
+
 //Scenes
 import Boot from './boot';
 import Preload from './preload';
@@ -5,6 +6,10 @@ import GameTitle from './gametitle';
 import Main from './main';
 import GameOver from './gameover';
 import GameConfig from './config';
+
+// Libs
+import PhaserFloodFill from './libs/PhaserFloodFill';
+import CanvasToBlob from './libs/CanvasToBlob';
 
 let game = false;
 
@@ -14,6 +19,9 @@ export default {
 
         if(game === false) {
 
+            PhaserFloodFill(Phaser);
+            CanvasToBlob(window);
+            
             //Set Game Config
             GameConfig.setConfig(config);
 
