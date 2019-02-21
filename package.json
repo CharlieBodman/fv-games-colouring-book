@@ -1,7 +1,7 @@
 {
     "name": "@fpcc/fv-game-colouring-book",
-    "version": "1.0.0",
-    "description": "",
+    "version": "1.0.1",
+    "description": "Colouring book game for FirstVoices.com",
     "main": "scripts/game.js",
     "private": false,
     "scripts": {
